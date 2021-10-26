@@ -10,7 +10,10 @@
         </p>
         <ul class="list-group">
         @foreach($todos as $todo)
-            <li class="list-group-item">{{$todo->description}}</li>
+            <li class="list-group-item">
+                <input type="checkbox" value="1" wire:click="done({{$todo->id}})" @if ($todo->done) checked @endif id="check_{{$todo->id}}}"/>    
+                <label style="text-decoration: {{$todo->done ? 'line-through':'none'}}" for="check_{{$todo->id}}}"> {{$todo->description}}</label>
+            </li>
         @endforeach
         </ul>
     @endif

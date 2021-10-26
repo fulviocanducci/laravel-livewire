@@ -5,18 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Todo extends Model
+class People extends Model
 {
     use HasFactory;
-    
-    protected $table = 'todos';
 
     protected $fillable = [
-        'description',
-        'done'
+        'name',
+        'active'
     ];
 
     protected $casts = [
-        'done' => 'boolean'
+        'active' => 'boolean'
     ];
 }

@@ -43,7 +43,7 @@ class TodoList extends Component
         
         Todo::create([
             'description' => $this->description,
-            'done' => true
+            'done' => false
         ]);
         $this->description = '';   
     }
