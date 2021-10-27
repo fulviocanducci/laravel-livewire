@@ -1,7 +1,4 @@
-<div>    
-    <div wire:loading>
-        ...
-    </div>
+<div>        
     @if ($status)
         <button type="button" class="btn btn-sm btn-success">
             <i class="bi bi-emoji-smile text-white" title="Ativo"></i>

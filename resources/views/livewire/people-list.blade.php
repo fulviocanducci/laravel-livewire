@@ -4,6 +4,7 @@
     @endif
     @if ($typeForm === 'list')    
     <h5>Lista de Pessoas</h5>
+    <hr class="mt-0 mb-2"/>
     <div class="mt-2 mb-3 text-center">
         <button type="button" wire:click="create" class="btn btn-primary btn-sm">Novo</button>
     </div>
@@ -62,5 +63,22 @@
     </div>
     @endif
     </div>
-    @endif
+    @endif    
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        Livewire.hook('component.initialized', function(component) {})
+        Livewire.hook('element.initialized', function(el, component) {})
+        Livewire.hook('element.updating', function(fromEl, toEl, component) {})
+        Livewire.hook('element.updated', function(el, component) { })
+        Livewire.hook('element.removed', function(el, component) {})
+        Livewire.hook('message.sent', function(message, component) {})
+        Livewire.hook('message.failed', function(message, component) {})
+        Livewire.hook('message.received', function(message, component) {})
+        Livewire.hook('message.processed', function(message, component) {
+            const name_people = document.getElementById('name_people');            
+            if (name_people) {                
+                name_people.select();
+            }})
+    });
+</script>

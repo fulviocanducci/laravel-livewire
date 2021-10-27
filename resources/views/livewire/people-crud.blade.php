@@ -1,5 +1,6 @@
 <div>
-    <h5>Pessoas - {{empty($pessoaId) ? "Cadastro":"Alteração"}}</h5>
+    <h5>Pessoa - {{ empty($peopleId) ? "Cadastro": "Alteração" }}</h5>
+    <hr class="mt-0 mb-2"/>
     <form method="POST" wire:submit.prevent="save">
         <div>
             @if (session()->has('message'))
@@ -14,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="name_people" class="form-label">Nome</label>
-            <input name="name" type="text" wire:model="name" class="form-control @error('name') is-invalid @enderror" id="name_people" maxlength="100" placeholder="Digite o nome">
+            <input name="name" type="text" wire:model="name" class="form-control @error('name') is-invalid @enderror" id="name_people" maxlength="100" placeholder="Digite o nome" tabindex="0" autofocus>
             @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
         </div>
         <div class="form-check mb-3">
