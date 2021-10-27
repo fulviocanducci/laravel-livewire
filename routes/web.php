@@ -6,6 +6,7 @@ use App\Http\Controllers\{
 };
 
 use App\Http\Livewire\{
+    PeopleCreateOrUpdate,
     PeopleList
 };
 
@@ -26,3 +27,5 @@ Route::get('/', [HomeController::class, "index"]);
 Route::get('/test', [TestController::class, 'index']);
 
 Route::get('/people', PeopleList::class);
+Route::get('/people/create', PeopleCreateOrUpdate::class);
+Route::get('/people/edit/{peopleId}', PeopleCreateOrUpdate::class);
