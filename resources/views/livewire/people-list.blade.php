@@ -75,10 +75,6 @@
         Livewire.hook('message.sent', function(message, component) {})
         Livewire.hook('message.failed', function(message, component) {})
         Livewire.hook('message.received', function(message, component) {})
-        Livewire.hook('message.processed', function(message, component) {
-            const name_people = document.getElementById('name_people');            
-            if (name_people) {                
-                name_people.select();
-            }})
+        Livewire.hook('message.processed', function(message, component) {})
     });
 </script>

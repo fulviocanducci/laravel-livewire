@@ -24,6 +24,6 @@
                 Ativo
             </label>
         </div>
-        <button type="submit" class="btn btn-success btn-sm">Salvar</button> | <button type="button" class="btn btn-danger btn-sm" wire:click="cancel">Cancelar</button>
+        <button type="submit" class="btn btn-success btn-sm">Salvar</button> <button type="button" class="btn btn-danger btn-sm" wire:click="cancel">Cancelar</button>
     </form>
 </div>
